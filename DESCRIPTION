@@ -22,6 +22,7 @@ BugReports: https://github.com/agdamsbo/package.aid/issues
 Suggests: 
     devtools,
     knitr,
+    pak,
     rmarkdown,
     roxygen2,
     spelling,
