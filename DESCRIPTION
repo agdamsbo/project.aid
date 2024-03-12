@@ -1,18 +1,32 @@
 Package: package.aid
 Type: Package
-Title: Aid publishing and updating packages
+Title: Aid creating, publishing and updating projects and packages
 Version: 0.1.0
 Authors@R: 
     person("Andreas Gammelgaard", "Damsbo", , "agdamsbo@clin.au.dk", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7559-1154"))
-Description: Functions to aid publishing and updating packages
-License: What license is it under?
+Description: Functions to aid in R project and package management.
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    dplyr,
     here,
+    httpuv,
+    keyring,
+    purrr,
+    renv,
     rsconnect,
-    usethis
-URL: https://github.com/agdamsbo/package.aid
+    shinylive
+URL: https://github.com/agdamsbo/package.aid, https://agdamsbo.github.io/package.aid/
 BugReports: https://github.com/agdamsbo/package.aid/issues
+Suggests: 
+    devtools,
+    knitr,
+    rmarkdown,
+    roxygen2,
+    spelling,
+    styler,
+    usethis
+VignetteBuilder: knitr
+Language: en-US
+RoxygenNote: 7.3.1

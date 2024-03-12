@@ -1,14 +1,17 @@
 
 #' Search for child dependencies in package dependencies
 #'
+#' @param path path to the package or project. Default is the source folder of
+#' the currently active project (`here::here("")`)
 #' @param packages character string of packages to search for
 #'
-#' @return
+#' @return list
 #' @export
 #'
 #' @examples
-#' check_dependencies(packages = c("curl"))
-#' check_dependencies()|>purrr::list_c() |> unique() |> sort()
+#' # Examples not run
+#' # check_dependencies(packages = c("curl"))
+#' # check_dependencies()|>purrr::list_c() |> unique() |> sort()
 check_dependencies <- function(path=here::here(""),packages = NULL) {
   sorted_unique <- function(data){sort(unique(data))}
 
