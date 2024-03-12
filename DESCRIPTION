@@ -1,0 +1,16 @@
+Package: package.aid
+Type: Package
+Title: Aid publishing and updating packages
+Version: 0.1.0
+Authors@R: 
+    person("Andreas Gammelgaard", "Damsbo", , "agdamsbo@clin.au.dk", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-7559-1154"))
+Description: Functions to aid publishing and updating packages
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    here,
+    rsconnect,
+    usethis
