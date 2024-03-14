@@ -1,4 +1,4 @@
-Package: package.aid
+Package: project.aid
 Type: Package
 Title: Aid creating, publishing and updating projects and packages
 Version: 0.1.0

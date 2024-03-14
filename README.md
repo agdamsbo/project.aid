@@ -2,6 +2,7 @@
 # package.aid
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/agdamsbo/package.aid/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/agdamsbo/package.aid/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of package.aid is to aid creating, publishing and updating projects and packages.

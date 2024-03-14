@@ -1,6 +1,12 @@
-GEnerate
+CMD
+RHUB
+ROSTOOLS
+RStudio
+Rprofile
+Zenodo
 dir
 io
+renv
 rsconnect
 shinyapps
 shinylive

@@ -18,22 +18,175 @@ knitr::opts_chunk$set(
 library(package.aid)
 ```
 
-## Steps for package publishing
+## Creating and starting a new project
+
+This is very much started as a personal reference check-list when starting new *R*-projects.
+
+Much of it is based on work from [ROSTOOLS](), but I have added a few personal preferences.
+
+- [ ] Creating a new project in RStudio (check "create git" and "use renv")
+
+- [ ] Run the following:
 
 ```{r eval=FALSE}
-# Checks fo rpublishing
+renv::install("usethis")
 
-results <- rhub::check_for_cran()
-
-results$cran_summary()
-
-
-# Release on CRAN - confirm e-mail
-devtools::release()
-# devtools::submit_cran()
-
-
-# Use the following to publish latest release to GitHub
-usethis::use_github_release()
+usethis::use_package("pak", "Suggest")
 ```
 
+- [ ] After `pak` is installed, edit the Rprofile file:
+
+```{r eval=FALSE}
+usethis::edit_r_profile(scope = "project")
+```
+
+    Copy the following to the profile-file:
+
+```
+options(
+  renv.settings.snapshot.type = "explicit",
+  renv.config.auto.snapshot = TRUE,
+  renv.config.pak.enabled = TRUE
+)
+source("renv/activate.R")
+
+if (interactive()) {
+  suppressMessages(require(usethis))
+}
+```
+
+- [ ] To set up documentation, run this:
+
+```{r eval=FALSE}
+usethis::use_readme_md()
+
+# License (one of the following or some different)
+usethis::use_gpl3_license()
+# or
+usethis::use_ccby_license()
+
+usethis::use_spell_check()
+```
+
+- [ ] Get the project to GitHub and start using GitHub Actions:
+
+```{r eval=FALSE}
+usethis::use_git()
+
+usethis::use_github()
+
+usethis::use_github_action()
+```
+
+- [ ] Document development suing `NEWS.md`:
+
+```{r eval=FALSE}
+usethis::use_news_md()
+```
+
+
+### Publishing the project
+
+- [ ] Run in _terminal_:
+
+```         
+quarto publish gh-pages
+```
+
+    This will create a new `gh-pages` branches in the repository.
+
+- [ ] Then run in _console_:
+
+```{r eval=FALSE}
+edit_file(".github/workflows/build-website.yaml")
+```
+
+     And then copy/paste this content to that file:
+
+```         
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+name: Render and Publish
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          # To install LaTeX to build PDF book
+          tinytex: true
+          # uncomment below and fill to pin a version
+          # version: 0.9.600
+
+       # The next two steps are used to setup the project when renv is used. Just uncomment and away you go!
+#      - uses: r-lib/actions/setup-r@v2
+
+#      - uses: r-lib/actions/setup-renv@v2
+
+      # From https://github.com/r-lib/actions/tree/v2-branch/setup-r
+      - name: Publish to GitHub Pages (and render)
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          # this secret is always available for github actions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+## New CRAN release checklist
+
+- [ ] Commit all changes to GIT
+
+- [ ] Checks for publishing with RHUB
+
+```{r eval=FALSE}
+results <- rhub::check_for_cran()
+```
+
+      
+Let it run. Takes some hours.
+
+- [ ] Check results:
+
+
+```{r eval=FALSE}
+results$cran_summary()
+```
+
+         
+Copy results to `cran-comments.md`
+
+
+```{r eval=FALSE}
+usethis::use_cran_comments()
+```
+
+- [ ] Release on CRAN
+
+```{r eval=FALSE}
+devtools::release()
+```
+
+         
+Follow instruction on e-mail to confirm upload
+
+
+- [ ] When approved, release to GitHub (this also publishes newest version to Zenodo if setup)
+
+```{r eval=FALSE}
+usethis::use_github_release()
+```
