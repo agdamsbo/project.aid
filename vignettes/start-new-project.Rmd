@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(package.aid)
+library(project.aid)
 ```
 
 ## Creating and starting a new project

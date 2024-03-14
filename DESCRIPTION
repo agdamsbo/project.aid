@@ -16,18 +16,18 @@ Imports:
     purrr,
     renv,
     rsconnect,
-    shinylive
+    shinylive,
+    pak,
+    usethis,
+    rmarkdown,
+    knitr
 URL: https://github.com/agdamsbo/package.aid, https://agdamsbo.github.io/package.aid/
 BugReports: https://github.com/agdamsbo/package.aid/issues
 Suggests: 
     devtools,
-    knitr,
-    pak,
-    rmarkdown,
     roxygen2,
     spelling,
-    styler,
-    usethis
+    styler
 VignetteBuilder: knitr
 Language: en-US
 RoxygenNote: 7.3.1
