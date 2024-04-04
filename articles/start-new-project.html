@@ -140,8 +140,12 @@ using GitHub Actions:</label></li>
 <span></span>
 <span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_github_action.html" class="external-link">use_github_action</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <ul class="task-list">
-<li><label><input type="checkbox">Document development suing
-<code>NEWS.md</code>:</label></li>
+<li><p><label><input type="checkbox">If using <code>renv</code> and
+Github Actions, then make sure to add
+<code>- uses: r-lib/actions/setup-renv@v2</code> to the action
+<code>.yaml</code> files.</label></p></li>
+<li><p><label><input type="checkbox">Document development suing
+<code>NEWS.md</code>:</label></p></li>
 </ul>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_news_md.html" class="external-link">use_news_md</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>

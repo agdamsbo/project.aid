@@ -25,6 +25,15 @@
     <loc>https://agdamsbo.github.io/project.aid/reference/check_dependencies.html</loc>
   </url>
   <url>
+    <loc>https://agdamsbo.github.io/project.aid/reference/check_microdata.default.html</loc>
+  </url>
+  <url>
+    <loc>https://agdamsbo.github.io/project.aid/reference/check_microdata.html</loc>
+  </url>
+  <url>
+    <loc>https://agdamsbo.github.io/project.aid/reference/check_microdata.tbl_summary.html</loc>
+  </url>
+  <url>
     <loc>https://agdamsbo.github.io/project.aid/reference/deploy_shiny.html</loc>
   </url>
   <url>
@@ -32,5 +41,8 @@
   </url>
   <url>
     <loc>https://agdamsbo.github.io/project.aid/reference/launch_shinylive.html</loc>
+  </url>
+  <url>
+    <loc>https://agdamsbo.github.io/project.aid/reference/str_extract.html</loc>
   </url>
 </urlset>
