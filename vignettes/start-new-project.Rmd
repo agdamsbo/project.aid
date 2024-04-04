@@ -78,6 +78,8 @@ usethis::use_github()
 usethis::use_github_action()
 ```
 
+- [ ] If using `renv` and Github Actions, then make sure to add `- uses: r-lib/actions/setup-renv@v2` to the action `.yaml` files.
+
 - [ ] Document development suing `NEWS.md`:
 
 ```{r eval=FALSE}
