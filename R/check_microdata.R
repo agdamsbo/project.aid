@@ -6,6 +6,7 @@
 #' 1) contains counts less than a specified threshold (default is three), or 2)
 #' contains counts that are less than the specified threshold from other cells
 #' in the same row.
+#' Ref: https://gt.rstudio.com/reference/tab_style.html
 #'
 #' @param data table to evaluate
 #' @param n.min count difference threshold (default is 3)
