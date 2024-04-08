@@ -14,6 +14,7 @@ Functions and tools will fall into three (for now) categories. Some are new and 
 
 ### Project creation and management
 
+- `read_file()`: attempts to recognise filetype by extension and imports based on relevant function. If aditional arguments are needed, please just use the relevant function directly. This has no intention of being very advanced.
 
 ### Data management
 
