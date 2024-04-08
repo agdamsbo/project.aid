@@ -24,5 +24,5 @@ deploy_shiny <- function(path = here::here("app/"),
   )
 
   # Deploying
-  rsconnect::deployApp(appDir = path, lint = TRUE, appName = name.app, )
+  rsconnect::deployApp(appDir = path, lint = TRUE, appName = name.app)
 }
