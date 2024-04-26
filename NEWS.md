@@ -22,4 +22,6 @@ Functions and tools will fall into three (for now) categories. Some are new and 
 
 - `str_extract()`: Easily extract string based on regex pattern
 
+- `docx2list()`: attempts to ease the import of data from .docx files using the `officer`-package
+
 ### Data publishing

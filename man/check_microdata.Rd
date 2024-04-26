@@ -20,6 +20,7 @@ Evaluates if tables contains microdata. Initially supports
 1) contains counts less than a specified threshold (default is three), or 2)
 contains counts that are less than the specified threshold from other cells
 in the same row.
+Ref: https://gt.rstudio.com/reference/tab_style.html
 }
 \examples{
 # mtcars |> gtsummary::tbl_summary(by = gear) |> check_microdata()

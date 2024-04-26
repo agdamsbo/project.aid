@@ -19,7 +19,10 @@ Imports:
     shinylive,
     gtsummary,
     gt,
-    dplyr
+    dplyr,
+    calendar,
+    lubridate,
+    officer
 URL: https://github.com/agdamsbo/package.aid, https://agdamsbo.github.io/package.aid/
 BugReports: https://github.com/agdamsbo/package.aid/issues
 Suggests: 
