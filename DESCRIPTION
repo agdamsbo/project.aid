@@ -1,7 +1,7 @@
 Package: project.aid
 Type: Package
 Title: Aid creating, publishing and updating projects and packages
-Version: 0.1.0
+Version: 24.6.1
 Authors@R: 
     person("Andreas Gammelgaard", "Damsbo", , "agdamsbo@clin.au.dk", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7559-1154"))
@@ -17,12 +17,16 @@ Imports:
     renv,
     rsconnect,
     shinylive,
-    gtsummary,
-    gt,
     dplyr,
     calendar,
     lubridate,
-    officer
+    officer,
+    glue,
+    haven,
+    openxlsx2,
+    readODS,
+    readr,
+    tidyselect
 URL: https://github.com/agdamsbo/package.aid, https://agdamsbo.github.io/package.aid/
 BugReports: https://github.com/agdamsbo/package.aid/issues
 Suggests: 

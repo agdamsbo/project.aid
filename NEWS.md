@@ -1,4 +1,4 @@
-# package.aid 0.1.0
+# project.aid 24.6.1
 
 Initial version:
 
@@ -14,11 +14,9 @@ Functions and tools will fall into three (for now) categories. Some are new and 
 
 ### Project creation and management
 
-- `read_file()`: attempts to recognise filetype by extension and imports based on relevant function. If aditional arguments are needed, please just use the relevant function directly. This has no intention of being very advanced.
+- `read_file()`: attempts to recognise file type by extension and imports based on relevant function. If additional arguments are needed, please just use the relevant function directly. This has no intention of being very advanced.
 
 ### Data management
-
-- `check_microdata()`: after having mistakenly exported microdata from the Statistics Denmark registry data servers, this function was created to help evaluate if tables contains microdata. Initially supports `gtsummary::tbl_summary()` tables. Colors problematic cells.
 
 - `str_extract()`: Easily extract string based on regex pattern
 

@@ -1,4 +1,4 @@
-#' Reads docx file and splits each table into list
+#' Reads docx file and splits each element into list
 #'
 #' @description
 #' If now header row is defined in a table, the first row will be used for
@@ -10,14 +10,15 @@
 #' Inspiration from `https://www.r-bloggers.com/2020/07/how-to-read-and-create-word-documents-in-r/`
 #'
 #' @param path file path
-#' @param data.type character vector. Could be "paragraph" or "table cell".
-#' @param verbose flag to give a few informations on the data
+#' @param data.type optional character vector to filter content. Could be
+#' "paragraph" or "table cell".
+#' @param verbose flag to give a little information on the data
 #'
 #' @return list
 #' @export
 docx2list <- function(path,
                       data.type = "table cell",
-                      verbose = TRUE) {
+                      verbose = FALSE) {
   doc <- officer::read_docx(path)
 
   content <- doc |> officer::docx_summary()

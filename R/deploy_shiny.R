@@ -4,6 +4,7 @@
 #' This is really just a simple wrapper
 #'
 #' @param path app folder path
+#' @param files files in folder path to deploy
 #' @param account.name shinyapps account name
 #' @param name.app name of deployed app
 #' @param name.token stored name of token
@@ -12,6 +13,7 @@
 #' @return deploy
 #' @export
 deploy_shiny <- function(path = here::here("app/"),
+                         files=NULL,
                          account.name,
                          name.app = "shiny_cast",
                          name.token,
@@ -24,5 +26,5 @@ deploy_shiny <- function(path = here::here("app/"),
   )
 
   # Deploying
-  rsconnect::deployApp(appDir = path, lint = TRUE, appName = name.app)
+  rsconnect::deployApp(appDir = path, appFiles = files, lint = TRUE, appName = name.app)
 }

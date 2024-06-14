@@ -4,19 +4,20 @@
 #'
 #' @param x Variable to cut.
 #' @param groups Number of groups.
-#' @param y alternative vector to draw quantile cuts from. Limits has 
+#' @param y alternative vector to draw quantile cuts from. Limits has
 #' to be within x. Default is NULL.
 #' @param na.rm Remove NA's. Default is TRUE.
-#' @param group.names Names of groups to split to. Default is NULL, 
+#' @param group.names Names of groups to split to. Default is NULL,
 #' giving intervals as names.
 #' @param ordered.f Set resulting vector as ordered. Default is FALSE.
 #' @param detail.list flag to include details or not
-#' @param inc.outs Flag to include min(x) and max(x) 
+#' @param inc.outs Flag to include min(x) and max(x)
 #' as borders in case of y!=NULL.
-#' 
+#'
 #' @return vector or list with vector and details (length 2)
 #'
 #' @keywords quantile
+#' @importFrom stats quantile
 #' @export
 #' @examples
 #' aa <- as.numeric(sample(1:1000,2000,replace = TRUE))
@@ -32,7 +33,7 @@ quantile_cut <- function (x,
                           inc.outs = FALSE,
                           detail.list = FALSE) {
   if (!is.null(y)) {
-    q <- quantile(
+    q <- stats::quantile(
       y,
       probs = seq(0, 1, 1 / groups),
       na.rm = na.rm,
@@ -46,14 +47,14 @@ quantile_cut <- function (x,
     }
   }
   if (is.null(y)) {
-    q <- quantile(
+    q <- stats::quantile(
       x,
       probs = seq(0, 1, 1 / groups),
       na.rm = na.rm,
       names = TRUE,
       type = 7
     )
-    
+
   }
   d <- cut(
     x,
@@ -66,5 +67,5 @@ quantile_cut <- function (x,
     list(d, q)
   else
     d
-  
+
 }

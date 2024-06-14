@@ -2,16 +2,17 @@
 % Please edit documentation in R/docx2list.R
 \name{docx2list}
 \alias{docx2list}
-\title{Reads docx file and splits each table into list}
+\title{Reads docx file and splits each element into list}
 \usage{
-docx2list(path, data.type = "table cell", verbose = TRUE)
+docx2list(path, data.type = "table cell", verbose = FALSE)
 }
 \arguments{
 \item{path}{file path}
 
-\item{data.type}{character vector. Could be "paragraph" or "table cell".}
+\item{data.type}{optional character vector to filter content. Could be
+"paragraph" or "table cell".}
 
-\item{verbose}{flag to give a few informations on the data}
+\item{verbose}{flag to give a little information on the data}
 }
 \value{
 list

@@ -6,6 +6,7 @@
 \usage{
 deploy_shiny(
   path = here::here("app/"),
+  files = NULL,
   account.name,
   name.app = "shiny_cast",
   name.token,
@@ -14,6 +15,8 @@ deploy_shiny(
 }
 \arguments{
 \item{path}{app folder path}
+
+\item{files}{files in folder path to deploy}
 
 \item{account.name}{shinyapps account name}
 
