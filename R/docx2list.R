@@ -1,3 +1,4 @@
+utils::globalVariables(c("cell_id", "content_type", "is_header", "row_id"))
 #' Reads docx file and splits each element into list
 #'
 #' @description

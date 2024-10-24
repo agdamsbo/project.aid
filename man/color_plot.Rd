@@ -25,13 +25,13 @@ color_plot(
 \item{ncol}{Desired number of columns. Default is ceiling of square root to
 the length of 'colors' vector provided.}
 
-\item{...}{Parameters for the}
+\item{...}{Passed to the 'contrast_text()'}
 }
 \value{
 base plot
 }
 \description{
-Plots color examples with contrasting text. Parameters are passed to 
+Plots color examples with contrasting text. Parameters are passed to
 contrast_text.
 }
 \examples{

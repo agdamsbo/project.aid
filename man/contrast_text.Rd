@@ -16,16 +16,16 @@ contrast_text(
 \arguments{
 \item{background}{A hex/named color value that represents the background.}
 
-\item{light_text}{A hex/named color value that represents the light text 
+\item{light_text}{A hex/named color value that represents the light text
 color.}
 
 \item{dark_text}{A hex/named color value that represents the dark text color.}
 
-\item{threshold}{A numeric value between 0 and 1 that is used to determine 
+\item{threshold}{A numeric value between 0 and 1 that is used to determine
 the luminance threshold of the background color for text color.}
 
-\item{method}{A character string that specifies the method for calculating 
-the luminance. Three different methods are available: 
+\item{method}{A character string that specifies the method for calculating
+the luminance. Three different methods are available:
 c("relative","perceived","perceived_2")}
 
 \item{...}{parameter overflow. Ignored.}
@@ -34,15 +34,15 @@ c("relative","perceived","perceived_2")}
 A character string that contains the best contrast text color.
 }
 \description{
-Calculates the best contrast text color for a given 
+Calculates the best contrast text color for a given
 background color.
 }
 \details{
 This function aids in deciding the font color to print on a given background.
-The function is based on the example provided by teppo: 
+The function is based on the example provided by teppo:
 https://stackoverflow.com/a/66669838/21019325.
-The different methods provided are based on the methods outlined in the 
-StackOverflow thread: 
+The different methods provided are based on the methods outlined in the
+StackOverflow thread:
 https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color
 }
 \examples{

@@ -13,7 +13,7 @@
 split_seq <- function(sequence, n = NULL, l = NULL, split.labels = NULL) {
   if (!is.null(l)) n <- ceiling(length(sequence) / l)
 
-  if (is.null(split.labels)) split.labels <- seq_len(n)
+  if (is.null(split.labels)) split.labels <- paste0("g",seq_len(n))
 
   split(
     sequence,

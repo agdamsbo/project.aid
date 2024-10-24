@@ -1,3 +1,4 @@
+utils::globalVariables(c("DTSTART"))
 #' Convert data set to ical file
 #'
 #' @param data data set
@@ -39,7 +40,7 @@ ds2ical <- function(data,
       DTEND = {{ end }},
       LOCATION = {{ location }}
     )
-  
+
   if (!is.null(description.glue.string)) {
     ds <- dplyr::mutate(ds,
                         DESCRIPTION = glue::glue(
@@ -48,7 +49,7 @@ ds2ical <- function(data,
                         )
     )
   }
-  
+
   ds |>
     dplyr::select(tidyselect::any_of(c("SUMMARY",
                                        "DTSTART",
@@ -60,6 +61,6 @@ ds2ical <- function(data,
         dplyr::mutate(UID = replicate(nrow(x), calendar::ic_guid()))
     })() |>
     dplyr::filter(!is.na(DTSTART)) |>
-    # dplyr::filter(dplyr::if_any(DTSTART, Negate(is.na))) |> 
+    # dplyr::filter(dplyr::if_any(DTSTART, Negate(is.na))) |>
     calendar::ical()
 }
