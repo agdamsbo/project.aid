@@ -1,87 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/404.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/articles/start-new-project.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/index.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/add_padding.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/age_calc.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/check_dependencies.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/chunks_of_n.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/color_plot.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/contrast_text.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/deploy_shiny.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/docx2list.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/ds2ical.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/file_extension.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/files_filter.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/launch_shinylive.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/merge_scripts.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/n_chunks.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/quantile_cut.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/read_input.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/seq_iter.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/split_seq.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/str_extract.html</loc>
-  </url>
-  <url>
-    <loc>https://agdamsbo.github.io/project.aid/reference/write_ical.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://agdamsbo.github.io/project.aid/404.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/LICENSE.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/articles/index.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/articles/start-new-project.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/authors.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/index.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/news/index.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/add_padding.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/age_calc.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/check_dependencies.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/chunks_of_n.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/color_plot.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/contrast_text.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/deploy_shiny.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/docx2list.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/ds2ical.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/file_extension.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/files_filter.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/gtsummary_write.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/index.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/launch_shinylive.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/log_tics.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/merge_scripts.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/n_chunks.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/quantile_cut.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/read_input.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/seq_iter.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/split_seq.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/str_extract.html</loc></url>
+<url><loc>https://agdamsbo.github.io/project.aid/reference/write_ical.html</loc></url>
 </urlset>
+
