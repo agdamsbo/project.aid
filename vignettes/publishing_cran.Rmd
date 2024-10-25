@@ -1,0 +1,70 @@
+---
+title: "publishing_cran"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{publishing_cran}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(project.aid)
+```
+
+## Releasing to CRAN-checklist
+
+Consider avoiding `ren` when publishing to CRAN. THis has caused so much trouble, and really is only necessary on collaborative data projects to streamline the analyses.
+
+THe checklist below really is the same no matter if you are updating or publishing first version.
+
+- [ ] Commit all changes to GIT
+
+- [ ] Update docs and check package locally
+
+```{r eval=FALSE}
+devtools::check(
+  document = TRUE,
+  manual = TRUE,
+  remote = TRUE,
+  incoming = TRUE
+)
+```
+
+Copy results to `cran-comments.md`
+
+- [ ] Checks for publishing with RHUB
+
+```{r eval=FALSE}
+# If not already setup, then initialise RHUB with the two following lines and follow instructions in the console.
+# rhub::rhub_setup()
+# rhub::rhub_doctor() # THis is also the command for trouble shooting
+
+rhub::rhub_check(platforms = c(
+  "linux",
+  "macos",
+  "macos-arm64",
+  "windows"))
+```
+
+Let it run. Takes less than an hour. Check results in GitHub.
+
+- [ ] Release on CRAN (make sure to answer all questions prompted)
+
+```{r eval=FALSE}
+devtools::release()
+```
+
+Follow instruction on e-mail to confirm upload
+
+- [ ] When approved, release to GitHub (this also publishes newest version to Zenodo if setup)
+
+```{r eval=FALSE}
+usethis::use_github_release()
+```

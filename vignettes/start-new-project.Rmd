@@ -149,46 +149,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-## New CRAN release checklist
 
-- [ ] Commit all changes to GIT
-
-- [ ] Checks for publishing with RHUB
-
-```{r eval=FALSE}
-results <- rhub::check_for_cran()
-```
-
-      
-Let it run. Takes some hours.
-
-- [ ] Check results:
-
-
-```{r eval=FALSE}
-results$cran_summary()
-```
-
-         
-Copy results to `cran-comments.md`
-
-
-```{r eval=FALSE}
-usethis::use_cran_comments()
-```
-
-- [ ] Release on CRAN
-
-```{r eval=FALSE}
-devtools::release()
-```
-
-         
-Follow instruction on e-mail to confirm upload
-
-
-- [ ] When approved, release to GitHub (this also publishes newest version to Zenodo if setup)
-
-```{r eval=FALSE}
-usethis::use_github_release()
-```
