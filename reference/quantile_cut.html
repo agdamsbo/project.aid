@@ -51,7 +51,9 @@
 <span>  group.names <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ordered.f <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  inc.outs <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  detail.list <span class="op">=</span> <span class="cn">FALSE</span></span>
+<span>  detail.list <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  probs <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  right <span class="op">=</span> <span class="cn">TRUE</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -64,7 +66,7 @@
 
 
 <dt id="arg-groups">groups<a class="anchor" aria-label="anchor" href="#arg-groups"></a></dt>
-<dd><p>Number of groups.</p></dd>
+<dd><p>Number of groups of equal size.</p></dd>
 
 
 <dt id="arg-y">y<a class="anchor" aria-label="anchor" href="#arg-y"></a></dt>
@@ -93,6 +95,16 @@ as borders in case of y!=NULL.</p></dd>
 <dt id="arg-detail-list">detail.list<a class="anchor" aria-label="anchor" href="#arg-detail-list"></a></dt>
 <dd><p>flag to include details or not</p></dd>
 
+
+<dt id="arg-probs">probs<a class="anchor" aria-label="anchor" href="#arg-probs"></a></dt>
+<dd><p>Supply exact probs directly to 'quantile()' for clusters of
+different sizes. If provided, then group is ignored. Default is NULL.</p></dd>
+
+
+<dt id="arg-right">right<a class="anchor" aria-label="anchor" href="#arg-right"></a></dt>
+<dd><p>logical, indicating if the intervals should be closed on the
+right (and open on the left) or vice versa (used in 'cut()').</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
@@ -101,12 +113,15 @@ as borders in case of y!=NULL.</p></dd>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">aa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1000</span>,<span class="fl">2000</span>,replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">aa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">1000</span>, <span class="fl">2000</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">450</span></span></span>
 <span class="r-in"><span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">6</span><span class="op">:</span><span class="fl">750</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="fu">quantile_cut</span><span class="op">(</span><span class="va">aa</span>,groups<span class="op">=</span><span class="fl">4</span>,detail.list<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span> <span class="co">## Cuts quartiles</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="fu">quantile_cut</span><span class="op">(</span><span class="va">aa</span>, groups <span class="op">=</span> <span class="fl">4</span>, detail.list <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span> <span class="co">## Cuts quartiles</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     [1,245]   (245,488]   (488,746] (746,1e+03] </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         500         502         499         499 </span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="fu">quantile_cut</span><span class="op">(</span><span class="va">aa</span>, probs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">.2</span>, <span class="fl">.5</span><span class="op">)</span>, detail.list <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   [1,194] (194,488]      NA's </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       400       602       998 </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
