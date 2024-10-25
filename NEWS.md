@@ -26,6 +26,8 @@ Functions and tools will fall into three (for now) categories. Some are new and 
 
 - `add_padding()`: add leading or tailing padding to string.
 
+- `quantile_cut()`: Wraps `quantile()` and `cut()` to allow cutting continuous data in equal size groups or by specifying exact probs (cut points). 
+
 ### Data publishing
 
 - `gtsummary_write()`: wrapper to export {gtsummary} table using {gt} which has been much improved recently.

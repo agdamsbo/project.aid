@@ -20,3 +20,6 @@ devtools::release()
 
 # Use the following to publish latest release to GitHub
 usethis::use_github_release()
+
+
+# c("pak","rhub","devtools","usethis") |> lapply(renv::install)
