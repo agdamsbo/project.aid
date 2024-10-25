@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   publishing_cran: publishing_cran.html
   start-new-project: start-new-project.html
-last_built: 2024-10-25T08:15Z
+last_built: 2024-10-25T08:17Z
 urls:
   reference: https://agdamsbo.github.io/project.aid/reference
   article: https://agdamsbo.github.io/project.aid/articles
