@@ -8,15 +8,15 @@ test_that("quatile_cut() works for detail.list==FALSE", {
 
 test_that("quatile_cut() works for inc.outs==TRUE", {
   result <-
-    quantile_cut(iris$Sepal.Length,
-                 3,
+    quantile_cut(x = iris$Sepal.Length,
+                 groups = 3,
                  y = iris$Sepal.Length + 3,
                  inc.outs = FALSE)
   expect_true(any(is.na(result)))
-  
+
   result <-
-    quantile_cut(iris$Sepal.Length,
-                 3,
+    quantile_cut(x =iris$Sepal.Length,
+                 groups =3,
                  y = iris$Sepal.Length + 3,
                  inc.outs = TRUE)
   expect_false(any(is.na(result)))
@@ -27,25 +27,30 @@ test_that("quatile_cut() works for inc.outs==TRUE", {
 ################################################################################
 
 test_that("quatile_cut() works for detail.list==TRUE", {
-  result <- quantile_cut(iris$Sepal.Length, 3, detail.list = TRUE)
+  result <- quantile_cut(x = iris$Sepal.Length,
+                         groups = 3,
+                         detail.list = TRUE)
   expect_length(result, 2)
   expect_type(result, "list")
 })
 
 ################################################################################
 
-# Test created using remotes::install_github("JamesHWade/gpttools") 
+# Test created using remotes::install_github("JamesHWade/gpttools")
 # unit test addin.
 test_that("quantile_cut works correctly", {
   x <- runif(100)
   groups <- 5
   y <- runif(100)
   expect_equal(
-    quantile_cut(x, groups, y, na.rm = TRUE),
+    quantile_cut(x =x,
+                 groups =groups,
+                 y = y,
+                 na.rm = TRUE),
     cut(
       x,
       quantile(
-        y,
+        x = y,
         probs = seq(0, 1, 1 / groups),
         na.rm = TRUE,
         names = TRUE,

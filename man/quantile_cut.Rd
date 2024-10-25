@@ -12,13 +12,15 @@ quantile_cut(
   group.names = NULL,
   ordered.f = FALSE,
   inc.outs = FALSE,
-  detail.list = FALSE
+  detail.list = FALSE,
+  probs = NULL,
+  right = TRUE
 )
 }
 \arguments{
 \item{x}{Variable to cut.}
 
-\item{groups}{Number of groups.}
+\item{groups}{Number of groups of equal size.}
 
 \item{y}{alternative vector to draw quantile cuts from. Limits has
 to be within x. Default is NULL.}
@@ -34,6 +36,12 @@ giving intervals as names.}
 as borders in case of y!=NULL.}
 
 \item{detail.list}{flag to include details or not}
+
+\item{probs}{Supply exact probs directly to 'quantile()' for clusters of
+different sizes. If provided, then group is ignored. Default is NULL.}
+
+\item{right}{logical, indicating if the intervals should be closed on the
+right (and open on the left) or vice versa (used in 'cut()').}
 }
 \value{
 vector or list with vector and details (length 2)
@@ -42,9 +50,10 @@ vector or list with vector and details (length 2)
 Using base/stats functions cut() and quantile().
 }
 \examples{
-aa <- as.numeric(sample(1:1000,2000,replace = TRUE))
+aa <- as.numeric(sample(1:1000, 2000, replace = TRUE))
 x <- 1:450
 y <- 6:750
-summary(quantile_cut(aa,groups=4,detail.list=FALSE)) ## Cuts quartiles
+summary(quantile_cut(aa, groups = 4, detail.list = FALSE)) ## Cuts quartiles
+summary(quantile_cut(aa, probs = c(0, .2, .5), detail.list = FALSE))
 }
 \keyword{quantile}
