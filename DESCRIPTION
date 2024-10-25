@@ -1,11 +1,12 @@
 Package: project.aid
 Type: Package
-Title: Aid creating, publishing and updating projects and packages
+Title: Project Aid
 Version: 24.10.1
 Authors@R: 
     person("Andreas Gammelgaard", "Damsbo", , "agdamsbo@clin.au.dk", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7559-1154"))
-Description: Functions to aid in R project and package management.
+Description: 
+    Handy tools and notes for creating, publishing and updating projects and packages.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
@@ -29,8 +30,8 @@ Imports:
     tidyselect,
     gtsummary,
     gt
-URL: https://github.com/agdamsbo/package.aid, https://agdamsbo.github.io/package.aid/
-BugReports: https://github.com/agdamsbo/package.aid/issues
+URL: https://github.com/agdamsbo/project.aid, https://agdamsbo.github.io/project.aid/
+BugReports: https://github.com/agdamsbo/project.aid/issues
 Suggests: 
     devtools,
     roxygen2,

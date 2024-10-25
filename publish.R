@@ -6,7 +6,7 @@
 rhub::rhub_check(platforms = c(
   "linux",
   "macos",
-  "macos-arm64",
+  # "macos-arm64",
   "windows"))
 
 # devtools::spell_check()
@@ -16,6 +16,13 @@ rhub::rhub_check(platforms = c(
 # Release on CRAN - confirm e-mail
 devtools::release()
 # devtools::submit_cran()
+devtools::check(document = TRUE,
+  manual = TRUE,
+  remote = TRUE,
+  incoming = TRUE
+)
+
+
 
 
 # Use the following to publish latest release to GitHub
