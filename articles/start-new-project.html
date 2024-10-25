@@ -33,7 +33,8 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/start-new-project.html">Start new project</a></li>
+<li><a class="dropdown-item" href="../articles/publishing_cran.html">publishing_cran</a></li>
+    <li><a class="dropdown-item" href="../articles/start-new-project.html">Start new project</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -192,39 +193,6 @@ jobs:
           # this secret is always available for github actions
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}</code></pre>
 </div>
-</div>
-<div class="section level2">
-<h2 id="new-cran-release-checklist">New CRAN release checklist<a class="anchor" aria-label="anchor" href="#new-cran-release-checklist"></a>
-</h2>
-<ul class="task-list">
-<li><p><label><input type="checkbox">Commit all changes to
-GIT</label></p></li>
-<li><p><label><input type="checkbox">Checks for publishing with
-RHUB</label></p></li>
-</ul>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">rhub</span><span class="fu">::</span><span class="fu">check_for_cran</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Let it run. Takes some hours.</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Check results:</label></li>
-</ul>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">results</span><span class="op">$</span><span class="fu">cran_summary</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Copy results to <code>cran-comments.md</code></p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_cran_comments.html" class="external-link">use_cran_comments</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<ul class="task-list">
-<li><label><input type="checkbox">Release on CRAN</label></li>
-</ul>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/release.html" class="external-link">release</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Follow instruction on e-mail to confirm upload</p>
-<ul class="task-list">
-<li><label><input type="checkbox">When approved, release to GitHub
-(this also publishes newest version to Zenodo if setup)</label></li>
-</ul>
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_github_release.html" class="external-link">use_github_release</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
