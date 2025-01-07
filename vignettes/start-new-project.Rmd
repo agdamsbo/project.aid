@@ -65,7 +65,8 @@ usethis::use_gpl3_license()
 # or
 usethis::use_ccby_license()
 
-usethis::use_spell_check()
+# usethis::use_spell_check()
+spelling::update_wordlist()
 ```
 
 - [ ] Get the project to GitHub and start using GitHub Actions:

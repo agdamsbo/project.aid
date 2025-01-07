@@ -1,3 +1,7 @@
+# project.aid 25.1.1
+
+First version to Zenodo. Still WIP.
+
 # project.aid 24.10.1
 
 Initial version:

@@ -16,28 +16,28 @@ add_padding <- function(d,length=NULL,after=FALSE,pad="0",lead=NULL,tail=NULL){
   if (!is.vector(d)) {
     stop("Please supply vector")
   }
-  
+
   if (nchar(pad)!=1) {
     stop("Padding value should be just a single character or digit")
   }
-  
+
   ns <- nchar(d)
-  
+
   if (is.null(length)){
     l <- max(ns)
   } else {
     l <- length
   }
-  
+
   ps <- unlist(lapply(l-ns,function(i){
     paste(rep(pad,i),collapse="")}))
-  
+
   if (after) {
     out <- paste0(d,ps)
   } else {
     out <- paste0(ps,d)
   }
-  
+
   paste0(lead,out,tail)
 
 }
