@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">project.aid</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">25.1.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">25.2.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Convert data set to ical file</h1>
-      <small class="dont-index">Source: <a href="https://github.com/agdamsbo/project.aid/blob/v25.1.1/R/ds2ical.R" class="external-link"><code>R/ds2ical.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/agdamsbo/project.aid/blob/main/R/ds2ical.R" class="external-link"><code>R/ds2ical.R</code></a></small>
       <div class="d-none name"><code>ds2ical.Rd</code></div>
     </div>
 
@@ -102,14 +102,14 @@ event description. Can take any column from data set.</p></dd>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 4</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   SUMMARY  DTSTART             DTEND               UID                          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;glue&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> ID 1 [A] 2025-01-07 <span style="color: #949494;">09:24:46</span> 2025-01-07 <span style="color: #949494;">11:24:46</span> ical-09ef2f83-9eba-4d1f-a8af…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> ID 3 [A] 2025-01-09 <span style="color: #949494;">09:24:46</span> 2025-01-09 <span style="color: #949494;">11:24:46</span> ical-55943cb0-3cfd-43a0-9ffc…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> ID 1 [A] 2025-02-25 <span style="color: #949494;">09:44:41</span> 2025-02-25 <span style="color: #949494;">11:44:41</span> ical-09ef2f83-9eba-4d1f-a8af…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> ID 3 [A] 2025-02-27 <span style="color: #949494;">09:44:41</span> 2025-02-27 <span style="color: #949494;">11:44:41</span> ical-55943cb0-3cfd-43a0-9ffc…</span>
 <span class="r-in"><span><span class="va">df</span> <span class="op">|&gt;</span> <span class="fu">ds2ical</span><span class="op">(</span>summary.glue.string <span class="op">=</span> <span class="st">"ID {id} [{assessor}] {note}"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 4</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   SUMMARY      DTSTART             DTEND               UID                      </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;glue&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> ID 1 [A]     2025-01-07 <span style="color: #949494;">09:24:46</span> 2025-01-07 <span style="color: #949494;">11:24:46</span> ical-f0535f7e-0c5a-4ea6-…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> ID 3 [A] OBS 2025-01-09 <span style="color: #949494;">09:24:46</span> 2025-01-09 <span style="color: #949494;">11:24:46</span> ical-2c246f66-2ec6-4b0d-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> ID 1 [A]     2025-02-25 <span style="color: #949494;">09:44:41</span> 2025-02-25 <span style="color: #949494;">11:44:41</span> ical-f0535f7e-0c5a-4ea6-…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> ID 3 [A] OBS 2025-02-27 <span style="color: #949494;">09:44:41</span> 2025-02-27 <span style="color: #949494;">11:44:41</span> ical-2c246f66-2ec6-4b0d-…</span>
 <span class="r-in"><span><span class="co"># Export .ics file: (not run)</span></span></span>
 <span class="r-in"><span><span class="va">ical</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">|&gt;</span> <span class="fu">ds2ical</span><span class="op">(</span><span class="va">start</span>, <span class="va">end</span>, <span class="va">location</span>,</span></span>
 <span class="r-in"><span>description.glue.string <span class="op">=</span> <span class="st">"{note}"</span><span class="op">)</span></span></span>
