@@ -1,3 +1,7 @@
+# project.aid 25.6.2
+
+- *FIX* added option to keep names of matched labels
+
 # project.aid 25.6.1
 
 - *NEW* added new labelling function to easily apply labels based on a named vector.

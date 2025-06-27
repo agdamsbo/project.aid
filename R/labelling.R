@@ -20,17 +20,22 @@ var_labels <- function() {
 #'
 #' @param data data
 #' @param target target to match against and subset from
+#' @param named keep names. Default is FALSE.
 #'
 #' @return character vector
 #' @export
 #'
-get_match <- function(data, target) {
+get_match <- function(data, target, named=FALSE) {
   if (!is.null(names(target))) {
     out <- target[match(data, names(target))]
   } else {
     out <- data
   }
-  unname(out)
+  if (named){
+    out
+  } else {
+    unname(out)
+  }
 }
 
 #' Flexible labelling based on named vector.
