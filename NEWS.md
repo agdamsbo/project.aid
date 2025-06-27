@@ -1,3 +1,7 @@
+# project.aid 25.6.1
+
+- *NEW* added new labelling function to easily apply labels based on a named vector.
+
 # project.aid 25.1.1
 
 - `combn_perm()`: Extension of base::combn() to get all permutations of group size(s) m. Includes an added safety net, that stops the calculations in case of varge large number of permutations, with flag to force and option to manually set the limit. The `base::combn()` just keeps running and stalls the system. Base functionality is just like `base::combn()`.
