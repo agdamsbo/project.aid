@@ -1,3 +1,7 @@
+# project.aid 25.9.1
+
+- *NEW* obscure_number() function added to offset numeric vectors by random number in interval.
+
 # project.aid 25.6.2
 
 - *FIX* added option to keep names of matched labels
